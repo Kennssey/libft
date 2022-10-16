@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mourihi <mourihi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 16:14:14 by mourihi           #+#    #+#             */
-/*   Updated: 2022/10/16 19:08:14 by mourihi          ###   ########.fr       */
+/*   Created: 2022/10/16 16:57:24 by mourihi           #+#    #+#             */
+/*   Updated: 2022/10/17 00:39:54 by mourihi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char	*s)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
+	int		i;
+	char	*str;
 
+	str = s;
 	i = 0;
-	while (s[i])
+	while (n > 0)
+	{
+		str[i] = c;
 		i++;
-	return (i);
+		n--;
+	}
 }
