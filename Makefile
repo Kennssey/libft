@@ -6,7 +6,7 @@
 #    By: mourihi <mourihi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 16:54:29 by mourihi           #+#    #+#              #
-#    Updated: 2022/12/08 18:16:22 by mourihi          ###   ########.fr        #
+#    Updated: 2022/12/10 15:45:46 by mourihi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,18 +56,18 @@ INCLUDES = libft.h
 all: $(NAME)
 
 $(NAME) : $(OBJ) $(INCLUDES)
-		ar rcs $(NAME) $(OBJ)
-		echo "$(NAME) archived"
+		@ar rc $(NAME) $(OBJ)
+		@echo "$(NAME) archived"
 
 %.o: %.c
-		gcc $(FLAG) -o $@ -c $^
+		@gcc $(FLAG) -o $@ -c $^
 
 clean:
-		rm -rf $(OBJ)
-		echo "object cleaned"
+		@rm -rf $(OBJ)
+		@echo "object cleaned"
 
 fclean: clean
-		rm -rf $(NAME)
-		echo "$(NAME) deleted"
+		@rm -rf $(NAME)
+		@echo "$(NAME) deleted"
 
 re: fclean all
