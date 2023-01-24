@@ -6,7 +6,7 @@
 /*   By: mourihi <mourihi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 22:05:06 by mourihi           #+#    #+#             */
-/*   Updated: 2022/12/08 18:11:57 by mourihi          ###   ########.fr       */
+/*   Updated: 2023/01/24 18:55:33 by mourihi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,3 @@ int	ft_atoi(const char *str)
 		return (0);
 	return ((int)res * sign);
 }
-
-	/*if (ft_strncmp(str, "2147483647", 11) == 0)
-		return (2147483647);
-	else if (ft_strncmp(str, "-2147483647", 12) == 0)
-		return (-2147483647);
-		
-		if (res * sign >= 469762049)
-		return (0);
-	if (res * sign <= -469762049)
-		return (-1);*/
